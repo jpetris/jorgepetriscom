@@ -1,147 +1,441 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jorge Petris | Software Development Services</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Backend, cloud infrastructure, and UI/UX development services by Jorge Petris."
+        />
+        <title>Jorge Petris | Software Development Services</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
 
-  <style>
-    :root {
-      --text: #1a1a1a;
-      --muted: #666;
-      --border: #e5e5e5;
-      --bg: #ffffff;
-      --accent: #0a66c2;
-    }
+    <body>
+        <header class="site-header">
+            <a
+                class="brand"
+                href="#top"
+                aria-label="Jorge Petris home"
+                data-i18n-aria-label="brandLabel"
+            >
+                <span class="brand-mark" aria-hidden="true">JP</span>
+                <span>
+                    <strong>Jorge Petris</strong>
+                    <small data-i18n="brandSubtitle"
+                        >Software Development Services</small
+                    >
+                </span>
+            </a>
 
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+            <div class="header-actions">
+                <nav
+                    class="site-nav"
+                    aria-label="Primary navigation"
+                    data-i18n-aria-label="primaryNavigation"
+                >
+                    <a href="#services" data-i18n="navServices">Services</a>
+                    <a href="#approach" data-i18n="navApproach">Approach</a>
+                    <a href="#contact" data-i18n="navContact">Contact</a>
+                </nav>
 
-    .container {
-      max-width: 720px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
+                <button
+                    class="language-toggle"
+                    type="button"
+                    aria-label="Switch to Spanish"
+                    data-language-toggle
+                >
+                    ES
+                </button>
+            </div>
+        </header>
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 6px;
-    }
+        <main id="top">
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-copy">
+                    <p class="eyebrow">
+                        <span data-i18n="heroEyebrow"
+                            >Independent software developer in Michoacan,
+                            Mexico</span
+                        >
+                    </p>
+                    <h1 id="hero-title" data-i18n="heroTitle">
+                        Practical software for systems that need to keep
+                        working.
+                    </h1>
+                    <p class="hero-intro" data-i18n="heroIntro">
+                        I help businesses build and maintain backend services,
+                        cloud infrastructure, and usable interfaces with a clear
+                        focus on reliability, maintainability, and useful
+                        delivery.
+                    </p>
 
-    h2 {
-      font-size: 1.2rem;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 6px;
-    }
+                    <div class="hero-actions" aria-label="Primary actions">
+                        <a
+                            class="button button-primary"
+                            href="mailto:contact@jorgepetris.com"
+                            data-i18n="contactByEmail"
+                            >Contact by email</a
+                        >
+                        <a
+                            class="button button-secondary"
+                            href="#services"
+                            data-i18n="viewServices"
+                            >View services</a
+                        >
+                    </div>
+                </div>
 
-    p {
-      margin: 10px 0;
-    }
+                <aside class="profile-panel" aria-label="Professional focus">
+                    <div class="profile-panel-header">
+                        <span class="profile-mark" aria-hidden="true">JP</span>
+                        <div>
+                            <strong>Jorge Petris</strong>
+                        </div>
+                    </div>
 
-    ul {
-      padding-left: 18px;
-    }
+                    <dl class="profile-list">
+                        <div>
+                            <dt data-i18n="profileBackendLabel">Backend</dt>
+                            <dd>Java, Spring Boot, REST, GraphQL</dd>
+                        </div>
+                        <div>
+                            <dt data-i18n="profileArchitectureLabel">
+                                Architecture
+                            </dt>
+                            <dd data-i18n="profileArchitectureValue">
+                                Microservices, Event-Driven, MVC
+                            </dd>
+                        </div>
+                        <div>
+                            <dt data-i18n="profileCloudLabel">Cloud & CI/CD</dt>
+                            <dd>AWS, Jenkins, Maven, Gradle</dd>
+                        </div>
+                        <div>
+                            <dt data-i18n="profileUiLabel">UI/UX support</dt>
+                            <dd data-i18n="profileUiValue">
+                                React, TypeScript, Design Systems
+                            </dd>
+                        </div>
+                    </dl>
+                </aside>
+            </section>
 
-    li {
-      margin-bottom: 6px;
-    }
+            <section
+                class="section section-split"
+                aria-labelledby="about-title"
+            >
+                <div>
+                    <p class="section-kicker" data-i18n="aboutKicker">About</p>
+                    <h2 id="about-title" data-i18n="aboutTitle">
+                        I build the parts of software that teams rely on every
+                        day.
+                    </h2>
+                </div>
+                <div class="section-body">
+                    <p data-i18n="aboutBody">
+                        Most of my work sits where product needs meet
+                        infrastructure realities: APIs, workflows, integrations,
+                        deployments, and the interfaces people use to get work
+                        done. I care about straightforward systems, readable
+                        code, secure defaults, and technical choices that are
+                        easy to explain later.
+                    </p>
+                </div>
+            </section>
 
-    .meta {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 20px;
-    }
+            <section
+                class="section"
+                id="services"
+                aria-labelledby="services-title"
+            >
+                <div class="section-heading">
+                    <p class="section-kicker" data-i18n="servicesKicker">
+                        Services
+                    </p>
+                    <h2 id="services-title" data-i18n="servicesTitle">
+                        Ways I can help.
+                    </h2>
+                </div>
 
-    .section {
-      margin-bottom: 10px;
-    }
+                <div class="service-grid">
+                    <article class="service-card">
+                        <span class="service-number">01</span>
+                        <h3 data-i18n="serviceBackendTitle">
+                            Backend Development
+                        </h3>
+                        <p data-i18n="serviceBackendBody">
+                            I build Java and Spring Boot services with clear
+                            boundaries, maintainable business logic, and room to
+                            grow.
+                        </p>
+                    </article>
 
-    .contact a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 500;
-    }
+                    <article class="service-card">
+                        <span class="service-number">02</span>
+                        <h3 data-i18n="serviceCloudTitle">
+                            Cloud Architecture
+                        </h3>
+                        <p data-i18n="serviceCloudBody">
+                            I set up AWS infrastructure, routing, and deployment
+                            paths, including CI/CD and configuration practices
+                            that make applications easier to support.
+                        </p>
+                    </article>
 
-    .contact a:hover {
-      text-decoration: underline;
-    }
+                    <article class="service-card">
+                        <span class="service-number">03</span>
+                        <h3 data-i18n="serviceUiTitle">
+                            UI/UX & Web Interfaces
+                        </h3>
+                        <p data-i18n="serviceUiBody">
+                            I build React/TypeScript interfaces that connect
+                            cleanly to backend services and keep user workflows
+                            straightforward.
+                        </p>
+                    </article>
 
-    .footer {
-      margin-top: 60px;
-      font-size: 0.85rem;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      padding-top: 15px;
-    }
+                    <article class="service-card">
+                        <span class="service-number">04</span>
+                        <h3 data-i18n="serviceConsultingTitle">
+                            Technical Consulting
+                        </h3>
+                        <p data-i18n="serviceConsultingBody">
+                            I help clarify architecture, review implementation
+                            plans, and turn broad technical goals into workable
+                            next steps.
+                        </p>
+                    </article>
+                </div>
+            </section>
 
-    .label {
-      font-weight: 500;
-      color: var(--text);
-    }
-  </style>
-</head>
+            <section
+                class="section section-split"
+                id="approach"
+                aria-labelledby="approach-title"
+            >
+                <div>
+                    <p class="section-kicker" data-i18n="approachKicker">
+                        Approach
+                    </p>
+                    <h2 id="approach-title" data-i18n="approachTitle">
+                        Small, practical engagements with production in mind.
+                    </h2>
+                </div>
+                <div class="section-body">
+                    <p data-i18n="approachBody">
+                        I work as a freelance developer on projects that need
+                        careful implementation rather than unnecessary
+                        complexity. That can mean designing a new service,
+                        improving an existing deployment, or helping a team make
+                        better technical decisions before they commit to a
+                        build.
+                    </p>
+                </div>
+            </section>
 
-<body>
-  <div class="container">
+            <section
+                class="contact-section"
+                id="contact"
+                aria-labelledby="contact-title"
+            >
+                <div>
+                    <p class="section-kicker" data-i18n="contactKicker">
+                        Contact
+                    </p>
+                    <h3 id="contact-title" data-i18n="contactTitle">
+                        Business inquiries
+                    </h3>
+                    <p data-i18n="contactBody">
+                        Have a project, integration, or system that needs
+                        attention? Send a short note and I will reply by email.
+                    </p>
+                </div>
 
-    <h1>Jorge Petris</h1>
-    <div class="meta">
-      📍 Jiquilpan, Michoacán, México<br>
-      📧 <a href="mailto:contact@jorgepetris.com">contact@jorgepetris.com</a>
-    </div>
+                <a class="contact-link" href="mailto:contact@jorgepetris.com">
+                    <span>contact@jorgepetris.com</span>
+                    <span aria-hidden="true">-></span>
+                </a>
+            </section>
+        </main>
 
-    <div class="section">
-      <h2>About Me</h2>
-      <p>
-        I am a software developer specializing in backend systems, cloud infrastructure,
-        and web application development. I build scalable services using technologies
-        such as AWS (ECS, API Gateway, Route 53), Java, and modern frontend frameworks.
-      </p>
-    </div>
+        <footer class="site-footer">
+            <p data-i18n="footerText">
+                &copy; 2026 Jorge Petris. This website represents Jorge Petris's
+                professional activity and provides information about his
+                services for business and identity verification purposes.
+            </p>
+        </footer>
 
-    <div class="section">
-      <h2>Services</h2>
-      <ul>
-        <li>Backend development (Java)</li>
-        <li>Cloud architecture and deployment (AWS)</li>
-        <li>Web application development (React)</li>
-        <li>System design and technical consulting</li>
-      </ul>
-    </div>
+        <script>
+            const translations = {
+                en: {
+                    pageTitle: "Jorge Petris | Software Development Services",
+                    metaDescription:
+                        "Backend, cloud infrastructure, and UI/UX development services by Jorge Petris.",
+                    brandLabel: "Jorge Petris home",
+                    brandSubtitle: "Software Development Services",
+                    primaryNavigation: "Primary navigation",
+                    navServices: "Services",
+                    navApproach: "Approach",
+                    navContact: "Contact",
+                    languageToggle: "ES",
+                    languageToggleLabel: "Switch to Spanish",
+                    heroEyebrow:
+                        "Independent software developer in Michoacan, Mexico",
+                    heroTitle:
+                        "Practical software for systems that need to keep working.",
+                    heroIntro:
+                        "I help businesses build and maintain backend services, cloud infrastructure, and usable interfaces with a clear focus on reliability, maintainability, and useful delivery.",
+                    contactByEmail: "Contact by email",
+                    viewServices: "View services",
+                    profileBackendLabel: "Backend",
+                    profileArchitectureLabel: "Architecture",
+                    profileArchitectureValue:
+                        "Microservices, Event-Driven, MVC",
+                    profileCloudLabel: "Cloud & CI/CD",
+                    profileUiLabel: "UI/UX support",
+                    profileUiValue: "React, TypeScript, Design Systems",
+                    aboutKicker: "About",
+                    aboutTitle:
+                        "I build the parts of software that teams rely on every day.",
+                    aboutBody:
+                        "Most of my work sits where product needs meet infrastructure realities: APIs, workflows, integrations, deployments, and the interfaces people use to get work done. I care about straightforward systems, readable code, secure defaults, and technical choices that are easy to explain later.",
+                    servicesKicker: "Services",
+                    servicesTitle: "Ways I can help.",
+                    serviceBackendTitle: "Backend Development",
+                    serviceBackendBody:
+                        "I build Java and Spring Boot services with clear boundaries, maintainable business logic, and room to grow.",
+                    serviceCloudTitle: "Cloud Architecture",
+                    serviceCloudBody:
+                        "I set up AWS infrastructure, routing, and deployment paths, including CI/CD and configuration practices that make applications easier to support.",
+                    serviceUiTitle: "UI/UX & Web Interfaces",
+                    serviceUiBody:
+                        "I build React/TypeScript interfaces that connect cleanly to backend services and keep user workflows straightforward.",
+                    serviceConsultingTitle: "Technical Consulting",
+                    serviceConsultingBody:
+                        "I help clarify architecture, review implementation plans, and turn broad technical goals into workable next steps.",
+                    approachKicker: "Approach",
+                    approachTitle:
+                        "Small, practical engagements with production in mind.",
+                    approachBody:
+                        "I work as a freelance developer on projects that need careful implementation rather than unnecessary complexity. That can mean designing a new service, improving an existing deployment, or helping a team make better technical decisions before they commit to a build.",
+                    contactKicker: "Contact",
+                    contactTitle: "Business inquiries",
+                    contactBody:
+                        "Have a project, integration, or system that needs attention? Send a short note and I will reply by email.",
+                    footerText:
+                        "\u00a9 2026 Jorge Petris. This website represents Jorge Petris's professional activity and provides information about his services for business and identity verification purposes.",
+                },
+                es: {
+                    pageTitle:
+                        "Jorge Petris | Servicios de Desarrollo de Software",
+                    metaDescription:
+                        "Servicios de desarrollo backend, infraestructura cloud y UI/UX por Jorge Petris.",
+                    brandLabel: "Inicio de Jorge Petris",
+                    brandSubtitle: "Servicios de Desarrollo de Software",
+                    primaryNavigation: "Navegación principal",
+                    navServices: "Servicios",
+                    navApproach: "Enfoque",
+                    navContact: "Contacto",
+                    languageToggle: "EN",
+                    languageToggleLabel: "Cambiar a inglés",
+                    heroEyebrow:
+                        "Desarrollador de software independiente en Michoacán, México",
+                    heroTitle:
+                        "Software práctico para sistemas que deben seguir funcionando.",
+                    heroIntro:
+                        "Ayudo a empresas a construir y mantener servicios backend, infraestructura cloud e interfaces usables con un enfoque claro en confiabilidad, mantenibilidad y entregas útiles.",
+                    contactByEmail: "Contactar por email",
+                    viewServices: "Ver servicios",
+                    profileBackendLabel: "Backend",
+                    profileArchitectureLabel: "Arquitectura",
+                    profileArchitectureValue:
+                        "Microservicios, Event-Driven, MVC",
+                    profileCloudLabel: "Cloud y CI/CD",
+                    profileUiLabel: "Soporte UI/UX",
+                    profileUiValue: "React, TypeScript, sistemas de diseño",
+                    aboutKicker: "Sobre mí",
+                    aboutTitle:
+                        "Construyo las partes del software en las que los equipos confían todos los días.",
+                    aboutBody:
+                        "Gran parte de mi trabajo vive donde las necesidades del producto se encuentran con la realidad de la infraestructura: APIs, flujos de trabajo, integraciones, despliegues y las interfaces que la gente usa para avanzar su trabajo. Me importan los sistemas claros, el código legible, las bases seguras y las decisiones técnicas que se pueden explicar después.",
+                    servicesKicker: "Servicios",
+                    servicesTitle: "Formas en las que puedo ayudar.",
+                    serviceBackendTitle: "Desarrollo Backend",
+                    serviceBackendBody:
+                        "Construyo servicios con Java y Spring Boot, con límites claros, lógica de negocio mantenible y espacio para crecer.",
+                    serviceCloudTitle: "Arquitectura Cloud",
+                    serviceCloudBody:
+                        "Configuro infraestructura en AWS, ruteo y caminos de despliegue, incluyendo prácticas de CI/CD y configuración que facilitan el soporte de las aplicaciones.",
+                    serviceUiTitle: "UI/UX e Interfaces Web",
+                    serviceUiBody:
+                        "Construyo interfaces con React/TypeScript que se conectan limpiamente con servicios backend y mantienen simples los flujos de usuario.",
+                    serviceConsultingTitle: "Consultoría Técnica",
+                    serviceConsultingBody:
+                        "Ayudo a aclarar arquitectura, revisar planes de implementación y convertir objetivos técnicos amplios en siguientes pasos viables.",
+                    approachKicker: "Enfoque",
+                    approachTitle:
+                        "Colaboraciones pequeñas y prácticas, pensando en producción.",
+                    approachBody:
+                        "Trabajo como desarrollador freelance en proyectos que necesitan implementación cuidadosa más que complejidad innecesaria. Eso puede significar diseñar un servicio nuevo, mejorar un despliegue existente o ayudar a un equipo a tomar mejores decisiones técnicas antes de comprometerse con una construcción.",
+                    contactKicker: "Contacto",
+                    contactTitle: "Consultas de negocio",
+                    contactBody:
+                        "¿Tienes un proyecto, integración o sistema que necesita atención? Envíame un correo y te contestaré a la brevedad.",
+                    footerText:
+                        "\u00a9 2026 Jorge Petris. Este sitio representa la actividad profesional de Jorge Petris y proporciona información sobre sus servicios para fines de verificación comercial y de identidad.",
+                },
+            };
 
-    <div class="section">
-      <h2>Business Activity</h2>
-      <p>
-        I provide freelance software development services, including the design,
-        implementation, and maintenance of web-based systems and cloud infrastructure.
-        My work focuses on delivering reliable, production-ready solutions tailored
-        to client requirements.
-      </p>
-    </div>
+            const languageToggle = document.querySelector(
+                "[data-language-toggle]",
+            );
+            const metaDescription = document.querySelector(
+                'meta[name="description"]',
+            );
+            const storedLanguage = localStorage.getItem("site-language");
+            const browserLanguage =
+                navigator.languages?.[0] || navigator.language;
+            const initialLanguage =
+                storedLanguage ||
+                (browserLanguage.startsWith("es") ? "es" : "en");
 
-    <div class="section contact">
-      <h2>Contact</h2>
-      <p>
-        For business inquiries:
-      </p>
-      <p>
-        <span class="label">Business Email:</span><br>
-        <a href="mailto:contact@jorgepetris.com">contact@jorgepetris.com</a>
-      </p>
-    </div>
+            function setLanguage(language) {
+                const copy = translations[language] || translations.en;
 
-    <div class="footer">
-      © 2026 Jorge Petris. This website represents my professional activity and is used
-      to provide information about my services and identity for business verification purposes.
-    </div>
+                document.documentElement.lang = language;
+                document.title = copy.pageTitle;
+                metaDescription.setAttribute("content", copy.metaDescription);
 
-  </div>
-</body>
+                document.querySelectorAll("[data-i18n]").forEach((element) => {
+                    const key = element.dataset.i18n;
+                    element.textContent = copy[key];
+                });
+
+                document
+                    .querySelectorAll("[data-i18n-aria-label]")
+                    .forEach((element) => {
+                        const key = element.dataset.i18nAriaLabel;
+                        element.setAttribute("aria-label", copy[key]);
+                    });
+
+                languageToggle.textContent = copy.languageToggle;
+                languageToggle.setAttribute(
+                    "aria-label",
+                    copy.languageToggleLabel,
+                );
+                languageToggle.dataset.language = language;
+            }
+
+            languageToggle.addEventListener("click", () => {
+                const nextLanguage =
+                    languageToggle.dataset.language === "es" ? "en" : "es";
+                localStorage.setItem("site-language", nextLanguage);
+                setLanguage(nextLanguage);
+            });
+
+            setLanguage(initialLanguage);
+        </script>
+    </body>
 </html>
